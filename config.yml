@@ -1,0 +1,33 @@
+# AWS Configuration
+region: us-east-1
+
+# S3 Configuration
+s3:
+  raw_bucket: nyc-taxi-raw
+  staged_bucket: nyc-taxi-staged
+  processed_bucket: nyc-taxi-processed
+
+# Lambda Configuration
+lambda:
+  function_name: nyc-taxi-ingest
+  memory: 128
+  timeout: 60
+  runtime: python3.9
+  handler: ingest.lambda_handler
+
+# Glue Configuration
+glue:
+  crawler_name: nyc-taxi-crawler
+  job_name: nyc-taxi-etl-job
+  database_name: nyc_taxi_db
+  table_prefix: staged_
+
+# CloudWatch Configuration
+cloudwatch:
+  log_retention_days: 30
+  metric_namespace: NYCTaxiAnalytics
+
+# IAM Roles
+iam:
+  lambda_role: nyc-taxi-ingest-role
+  glue_role: nyc-taxi-glue-role
