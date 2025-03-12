@@ -3,6 +3,8 @@
 ## Overview
 This project implements a **real-time NYC Taxi data pipeline** using AWS services (Lambda, S3, Glue) and Power BI for visualization. The pipeline ingests, processes, validates, and visualizes taxi trip data in near real-time.
 
+<img width="651" alt="Architecture" src="https://github.com/user-attachments/assets/f606e595-c1ef-4828-bcf4-85b0f7a1d727" />
+
 ---
 
 ## Components
